@@ -1,0 +1,20 @@
+name: immutable_collections
+description: Trialling custom immutable collections.
+version: 0.0.1
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+ collection: any
+
+dev_dependencies:
+  # normally in dependencies but only used in testing in this package
+  freezed_annotation: any
+  json_serializable: any
+  
+  pedantic: any
+  test: any
+  build_runner: any
+  freezed: any
