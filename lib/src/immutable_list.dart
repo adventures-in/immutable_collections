@@ -30,8 +30,7 @@ class ImmutableList<T> implements Iterable<T> {
   final List<T> _list;
 
   ImmutableList() : _list = [];
-  ImmutableList.fromList(List<T> list) : _list = [...list];
-  ImmutableList.fromIterable(Iterable<T> iterable) : _list = [...iterable];
+  ImmutableList.from(Iterable<T> iterable) : _list = [...iterable];
 
   ImmutableList._(List<T> list) : _list = list;
 
@@ -41,7 +40,7 @@ class ImmutableList<T> implements Iterable<T> {
   ImmutableList<T> copyAndRemoveLast() =>
       ImmutableList._([..._list]..removeLast());
 
-  factory ImmutableList.fromJson(List<T> json) => ImmutableList.fromList(json);
+  factory ImmutableList.fromJson(List<T> json) => ImmutableList.from(json);
 
   @override
   int get length => _list.length;
