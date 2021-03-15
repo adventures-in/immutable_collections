@@ -12,4 +12,8 @@ class ImmutableMap<K, V> {
       ImmutableMap._({..._map}..remove(key));
 
   factory ImmutableMap.fromJson(Map<K, V> json) => ImmutableMap.from(json);
+
+  V? operator [](Object? key) => _map[key];
+
+  Iterable<K> get keys => _map.keys;
 }
